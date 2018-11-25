@@ -1,6 +1,7 @@
 <template>
   <div class="home-page">
     <navbar-desktop />
+    <navbar-mobile />
     <hero
       v-bind:cta="heroCta"
       image="/src/assets/images/hero/bg-hero.jpg"
@@ -32,6 +33,7 @@ import HallOfFame from '../components/hall-of-fame'
 import Hero from '../components/hero'
 import HeroesSection from '../components/heroes-section'
 import NavbarDesktop from '../components/navbar-desktop'
+import navbarMobile from '../components/navbar-mobile'
 import NextEvents from '../components/next-events'
 import OrganizingTeam from '../components/organizing-team'
 import Sponsors from '../components/sponsors'
@@ -44,6 +46,7 @@ export default {
     Hero,
     HeroesSection,
     NavbarDesktop,
+    navbarMobile,
     NextEvents,
     OrganizingTeam,
     Sponsors,

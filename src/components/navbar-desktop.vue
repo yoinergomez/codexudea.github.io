@@ -1,36 +1,44 @@
 <template>
-  <div class="navbar-desktop">
-    <nav class="navbar-desktop-nav">
-      <div class="navbar-desktop-nav-list">
-        <li class="navbar-desktop-nav-brand">
-          <img src="../assets/images/logo.svg" alt="codex logo">
-        </li>
-        <li class="navbar-desktop-nav-item">
-          <a href="#">Eventos</a>
-        </li>
-        <li class="navbar-desktop-nav-item">
-          <a href="#">Heroes</a>
-        </li>
-        <li class="navbar-desktop-nav-item">
-          <a href="#">Salón de la Fama</a>
-        </li>
-        <li class="navbar-desktop-nav-item">
-          <a href="#">Equipo</a>
-        </li>
-        <li class="navbar-desktop-nav-item">
-          <a href="#">Dar una charla</a>
-        </li>
-        <li class="navbar-desktop-nav-item">
-          <a href="#">Patrocinadores</a>
-        </li>
-      </div>
-    </nav>
-  </div>
+  <nav class="navbar-desktop">
+    <ul class="navbar-desktop_list">
+      <li class="menu-button" @click="toggleNav()">
+        <i class="fa fa-bars" aria-hidden="true"/>
+      </li>
+      <li class="navbar-desktop-brand">
+        <img src="../assets/images/logo.svg" alt="codex logo">
+      </li>
+    </ul>
+    <ul class="navbar-desktop_list">
+      <li class="navbar-desktop-item">
+        <a href="#events">Eventos</a>
+      </li>
+      <li class="navbar-desktop-item">
+        <a href="#heroes">Heroes</a>
+      </li>
+      <li class="navbar-desktop-item">
+        <a href="#hall-of-fame">Salón de la Fama</a>
+      </li>
+      <li class="navbar-desktop-item">
+        <a href="#team">Equipo</a>
+      </li>
+      <li class="navbar-desktop-item">
+        <a href="#speaker">Dar una charla</a>
+      </li>
+      <li class="navbar-desktop-item">
+        <a href="#sponsors">Patrocinadores</a>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
 export default {
-  name: 'navbar-desktop'
+  name: 'navbar-desktop',
+  methods: {
+    toggleNav: function () {
+      this.$parent.$emit('toggleNav')
+    }
+  }
 }
 </script>
 
